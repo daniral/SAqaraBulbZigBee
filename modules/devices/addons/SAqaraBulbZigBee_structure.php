@@ -38,10 +38,10 @@ $this->device_types['SAqaraBulb'] = array(
 			'color_seved' => array('DESCRIPTION' => 'Сохраненная(предыдущая) теплота.'),
 			'sunriseTime' => array('DESCRIPTION' => 'Время восхода солнца.'),
 			'sunsetTime' => array('DESCRIPTION' => 'Время захода солнца.'),
-			'brightnessMax' => array('DESCRIPTION' => 'Максимальная яркость.'),
-			'brightnessMin' => array('DESCRIPTION' => 'Минимальная яркость.'),
-			'color_tempMax' => array('DESCRIPTION' => 'Максимальная теплота.'),
-			'color_tempMin' => array('DESCRIPTION' => 'Минимальная теплота.'),
+			'brightnessMax' => array('DESCRIPTION' => 'Максимальная яркость.', '_CONFIG_TYPE' => 'num'),
+			'brightnessMin' => array('DESCRIPTION' => 'Минимальная яркость.', '_CONFIG_TYPE' => 'num'),
+			'color_tempMax' => array('DESCRIPTION' => 'Максимальная теплота.', '_CONFIG_TYPE' => 'num'),
+			'color_tempMin' => array('DESCRIPTION' => 'Минимальная теплота.', '_CONFIG_TYPE' => 'num'),
 			
         ),
         'METHODS' => array(
