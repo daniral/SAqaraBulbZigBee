@@ -26,9 +26,4 @@ if (isset($params['value'])) {
 	$new_brightLevel = $b_max;
 }
 
-if ($new_brightLevel == $this->getProperty('brightness')) {
-	return;
-}
-
-
 $this->setProperty('brightness', $new_brightLevel);
