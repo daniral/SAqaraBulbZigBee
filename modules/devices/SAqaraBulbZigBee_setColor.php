@@ -27,3 +27,7 @@ if (isset($params['value'])) {
 }
 
 $this->setProperty('color_temp', $new_color_temp);
+
+if(!$this->getProperty('brightness')){
+	$this->setProperty('brightness',$this->getProperty('brightness_seved'));
+}
