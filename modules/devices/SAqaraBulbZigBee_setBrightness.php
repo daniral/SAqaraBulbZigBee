@@ -1,6 +1,6 @@
 <?php
 /*
-Установить яркость света.(array("value"=>brightnessMin<=brightnessMax))
+Установить яркость света.(array("value"=>brightnessMin <--> brightnessMax))
 Без  параметров то что в brightness_seved.
 Если brightness_seved пусто то brightnessMax.
 */
@@ -12,7 +12,7 @@ $new_brightLevel;
 
 if (isset($params['value'])) {
 	$new_brightLevel = $params['value'];
-	if ($new_brightLevel <= $b_min) {
+	if ($new_brightLevel < $b_min) {
 		$new_brightLevel = $b_min;
 		$this->setProperty('flag', 0);
 		$this->setProperty('illuminanceFlag', 0);

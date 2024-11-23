@@ -1,7 +1,7 @@
 <?php
 
 /*
-Установить температуру.(array("value"=>color_tempMin<=color_tempMax))
+Установить температуру.(array("value"=>color_tempMin <--> color_tempMax))
 Без  параметров то что в color_seved.
 Если color_seved пуст то холодный color_tempMin.
 */
