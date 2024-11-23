@@ -5,6 +5,7 @@
 Включить - callMethod('имя объекта '.'turnOn'); если без параметров установит то что в brightness_seved и color_seved.
 Если brightness_seved и color_seved пусто то на полную яркость 254 и холодный цвет 153.( flag=1. AutoOFF не запустится.)
 Включить  с параметрами - callMethod('имя объекта.turnOn', array('brightness'=>brightnessMin---brightnessMax,'color'=>color_tempMin---color_tempMax));  (flag=1. AutoOFF не запустится.)
+ну я хз
 */
 
 if (!$this->getProperty('day_brightness')) $this->setProperty('day_brightness', '254');
