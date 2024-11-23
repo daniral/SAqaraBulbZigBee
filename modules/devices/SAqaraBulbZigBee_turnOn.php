@@ -1,11 +1,12 @@
 <?php
 /*
+
 Включить ночной режим - callMethod('имя объекта '.'turnOn', array('dayNight'=>1)); если без параметров установит то что в night_brightness и night_color. ( flag=0. AutoOFF запустится.)
 Включить ночной режим с параметрами - callMethod('имя объекта.turnOn', array('brightness'=>50,'color'=>10,'dayNight'=>1)); (flag=0. AutoOFF запустится.)
 Включить - callMethod('имя объекта '.'turnOn'); если без параметров установит то что в brightness_seved и color_seved.
 Если brightness_seved и color_seved пусто то на полную яркость 254 и холодный цвет 153.( flag=1. AutoOFF не запустится.)
 Включить  с параметрами - callMethod('имя объекта.turnOn', array('brightness'=>brightnessMin---brightnessMax,'color'=>color_tempMin---color_tempMax));  (flag=1. AutoOFF не запустится.)
-ну я хз
+
 */
 
 if (!$this->getProperty('day_brightness')) $this->setProperty('day_brightness', '254');
