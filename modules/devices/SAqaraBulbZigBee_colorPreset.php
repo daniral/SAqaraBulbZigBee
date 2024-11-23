@@ -21,7 +21,5 @@ if (isset($params[value])) {
   if ($this->getProperty('color_temp') == $colorSet) {
     return;
   }
-  $this->cm('setColor', array('value' => $colorSet));
-} else {
-  return;
+  $this->callMethod('setColor', array('value' => $colorSet));
 }

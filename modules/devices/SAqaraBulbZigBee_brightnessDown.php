@@ -8,10 +8,6 @@
 $inc;
 $brightness = $this->getProperty('brightness');
 
-if ($brightness <= $this->getProperty('brightnessMin') + 5) {
-  return;
-}
-
 if (isset($params[value]) && $params[value] > 0 && $params[value] <= 50) {
   $inc = $params[value];
   if ($inc > 0) {
@@ -27,4 +23,8 @@ if ($brightness < $this->getProperty('brightnessMin') + 5) {
   $brightness = $this->getProperty('brightnessMin') + 5;
 }
 
-$this->cm('setBrightness', array('value' => $brightness));
+if ($brightness == $this->getProperty('brightness')) {
+  return;
+}
+
+$this->callMethod('setBrightness', array('value' => $brightness));

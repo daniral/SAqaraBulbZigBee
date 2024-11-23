@@ -9,10 +9,6 @@ $inc;
 $color = $this->getProperty('color_temp');
 $c_max = $this->getProperty('color_tempMax');
 
-if ($color >= $this->getProperty('color_tempMax')) {
-  return;
-}
-
 if (isset($params[value]) && $params[value] > 0 && $params[value] <= 50) {
   $inc = $params[value];
   if ($inc < 0) {
@@ -28,4 +24,8 @@ if ($color > $c_max) {
   $color = $c_max;
 }
 
-$this->cm('setColor', array('value' => $color));
+if ($color == $this->getProperty('color_temp')) {
+  return;
+}
+
+$this->callMethod('setColor', array('value' => $color));

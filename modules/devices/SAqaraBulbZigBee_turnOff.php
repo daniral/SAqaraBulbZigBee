@@ -1,3 +1,3 @@
 <?php
 
-$this->cm('setBrightness', array('value' => $this->getProperty('brightnessMin')));
+$this->callMethod('setBrightness', array('value' => $this->getProperty('brightnessMin')));

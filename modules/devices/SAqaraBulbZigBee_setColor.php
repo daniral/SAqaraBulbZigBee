@@ -16,8 +16,7 @@ if (isset($params['value'])) {
 	$new_color_temp = $params['value'];
 	if ($new_color_temp < $c_min) {
 		$new_color_temp = $c_min;
-	}
-	if ($new_color_temp > $c_max) {
+	} else if ($new_color_temp > $c_max) {
 		$new_color_temp = $c_max;
 	}
 } else if ($c_seved) {
@@ -26,11 +25,6 @@ if (isset($params['value'])) {
 	$new_color_temp = $c_min;
 }
 
-if ($new_color_temp != $c_seved) {
-	$this->setProperty('color_seved', $new_color_temp);
-} else {
-	return;
-}
 
 if (!$this->getProperty('flag')) $this->setProperty('flag', '1');
 $this->setProperty('color_temp', $new_color_temp);
