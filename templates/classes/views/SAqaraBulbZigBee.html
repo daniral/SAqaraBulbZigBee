@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    var dimmer%.object_id%brightness=%.brightness%;
+    var dimmer%.object_id%color_temp=%.color_temp%;
+    var dimmer%.object_id%Timer=0;
+
+    function sendNewbrightness%.object_id%() {
+        setGlobal("%.object_title%.brightness",dimmer%.object_id%brightness);
+    }
+    function dimmerSetbrightness%.object_id%(val) {
+		dimmer%.object_id%brightness=val;
+        $('#dimmer%.object_id%_bright').html(dimmer%.object_id%brightness);
+        sendNewbrightness%.object_id%();
+    }
+
+    function sendNewcolor_temp%.object_id%() {
+        setGlobal("%.object_title%.color_temp",dimmer%.object_id%color_temp);
+    }
+    function dimmerSetcolor_temp%.object_id%(val) {
+        dimmer%.object_id%color_temp=val;
+        $('#dimmer%.object_id%_color_temp').html(dimmer%.object_id%color_temp);
+        sendNewcolor_temp%.object_id%();
+    }
+    
+</script>
+<div class="device-widget controller loadtype_%.loadType%">
+ <div onClick='$("#icon%.object_id%_light").addClass("pressed");setTimeout("$(\"#icon%.object_id%_light\").removeClass(\"pressed\");",300);callMethod("%.object_title%.switch");'>
+  <div class="device-icon %.status|"off;on"%" id="icon%.object_id%_light" style='%.icon|"background-image:url(%.icon%)"%'></div>
+  <div class="device-header">%.object_description%</div>
+</div>
+<p>
+
+ <div class="device-details"> <span id="dimmer%.object_id%_bright">Яркость: %.brightness%</span></div>
+  <input id="dimmerSelect%.object_id%" type="range" min="0" max="254" step="1" value="%.brightness%" oninput="dimmerSetbrightness%.object_id%(this.value);">
+ 
+ <div class="device-details"> <span id="dimmer%.object_id%_color_temp">Температура: %.color_temp%</span></div>
+  <input id="dimmerSelect%.object_id%" type="range" min="153" max="370" step="1" value="%.color_temp%" oninput="dimmerSetcolor_temp%.object_id%(this.value);">
+ </p>
+</div>
