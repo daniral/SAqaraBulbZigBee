@@ -66,13 +66,13 @@ if ($dayNight && !$this->getProperty('flag')) {
     $night_b = $this->getProperty('night_begin');
   }
   if ($this->getProperty('auto_ON/OFF')) {
-    if ($this->getProperty('work_in_dai') == '2' || $this->getProperty('work_in_dai') == '0' && !$this->getProperty('bySensor') && timeBetween($night_b, $day_b)) {
+    if (($this->getProperty('work_in_dai') == '2' || $this->getProperty('work_in_dai') == '0') && !$this->getProperty('bySensor') && timeBetween($night_b, $day_b)) {
       $this->setProperty('brightness', $brightnes ? $brightnes : $this->getProperty('night_brightness'));
       $this->setProperty('color_temp', $color ? $color : $this->getProperty('night_color'));
       if ($this->getProperty('flag')) $this->setProperty('flag', '0');
       $this->callMethod('AutoOFF');
     }
-    if ($this->getProperty('work_in_dai') == '1' || $this->getProperty('work_in_dai') == '0' && !$this->getProperty('bySensor') && timeBetween($day_b, $night_b)) {
+    if (($this->getProperty('work_in_dai') == '1' || $this->getProperty('work_in_dai') == '0') && !$this->getProperty('bySensor') && timeBetween($day_b, $night_b)) {
       $this->setProperty('brightness', $brightnes ? $brightnes : $this->getProperty('day_brightness'));
       $this->setProperty('color_temp', $color ? $color : $this->getProperty('day_color'));
       if ($this->getProperty('flag')) $this->setProperty('flag', '0');
