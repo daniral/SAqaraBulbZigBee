@@ -1,3 +1,3 @@
 # SAqaraBulbZigBee
 Управление лампочками Xiaomi Zigbee
-alfa23
+alfa23ew
