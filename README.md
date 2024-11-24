@@ -1,3 +1,3 @@
 # SAqaraBulbZigBee
 Управление лампочками Xiaomi Zigbee
-master
+alfa
